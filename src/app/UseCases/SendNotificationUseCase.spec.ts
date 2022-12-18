@@ -1,5 +1,5 @@
 import { randomUUID } from 'crypto';
-import { InMemoryNotificationRepository } from '@test/repositories/NotificationRepository-InMemory';
+import { InMemoryNotificationRepository } from '../../../test/repositories/NotificationRepository-InMemory';
 import { SendNotificationUseCase } from './SendNotificationUsecase';
 
 describe('Send Notification', () => {
