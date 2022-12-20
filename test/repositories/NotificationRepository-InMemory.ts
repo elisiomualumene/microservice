@@ -28,6 +28,19 @@ class InMemoryNotificationRepository implements INotificationRepository {
       this.notifications[notificationIndex] = notification;
     }
   }
+
+  async countByRecipientId(recipientId: string): Promise<number> {
+    return this.notifications.filter((item) => item.recipientId === recipientId)
+      .length;
+  }
+
+  async NotificationsByRecipientId(
+    recipientId: string,
+  ): Promise<Notification[]> {
+    return this.notifications.filter(
+      (item) => item.recipientId === recipientId,
+    );
+  }
 }
 
 export { InMemoryNotificationRepository };
